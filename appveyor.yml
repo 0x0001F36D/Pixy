@@ -1,8 +1,13 @@
-version: '{build}'
+version: '1.0.0.{build}'
 image: Visual Studio 2017
 branches:
   only:
   - master
+  
+platform:
+  - x86
+
+configuration: DEBUG
 
 before_build:
   - nuget restore
