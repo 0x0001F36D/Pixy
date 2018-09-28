@@ -80,8 +80,7 @@ namespace Pixy.Topology.Nodes
     /// The Endpoint Topological-Node (Minimum condition for forming a node)
     /// </summary>
     public class EP : ITN
-    {
-        
+    { 
         public IPayload Payload => ImmutablePayload.Instance;
         
     }
