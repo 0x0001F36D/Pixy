@@ -42,7 +42,7 @@ namespace Pixy.Test.Topology
 
         [Test]
         [TestCaseSource("e")]
-        public void Check(IEnumerable<EP> eps)
+        public void StructureCheck(IEnumerable<EP> eps)
         {
 
             var sx = new SX();

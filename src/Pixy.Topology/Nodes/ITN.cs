@@ -73,7 +73,13 @@ namespace Pixy.Topology.Nodes
             return false;
             
         }
-
+        public IEnumerable<ITN> GetCurrentLayer()
+        {
+            foreach (var item in this._table.Values)
+            {
+                yield return item;
+            }
+        }
     }
 
     /// <summary>
@@ -82,6 +88,11 @@ namespace Pixy.Topology.Nodes
     public class EP : ITN
     { 
         public IPayload Payload => ImmutablePayload.Instance; 
+
+        public IEnumerable<ITN> GetCurrentLayer()
+        {
+            yield return this;
+        }
         
     } 
 
@@ -91,6 +102,8 @@ namespace Pixy.Topology.Nodes
     public interface ITN
     {
         IPayload Payload { get; }
+
+        IEnumerable<ITN> GetCurrentLayer();
     }
 
 }
