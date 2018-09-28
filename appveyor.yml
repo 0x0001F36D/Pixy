@@ -1,0 +1,15 @@
+version: {build}
+image: Visual Studio 2017
+branches:
+  only:
+  - master
+platform: x86|x64
+configuration: DEBUG
+before_build:
+  - nuget restore
+
+for:
+-
+  matrix:
+    only:
+      - image: Visual Studio 2017
