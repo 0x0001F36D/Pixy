@@ -81,12 +81,9 @@ namespace Pixy.Topology.Nodes
     /// </summary>
     public class EP : ITN
     { 
-        public IPayload Payload => ImmutablePayload.Instance;
+        public IPayload Payload => ImmutablePayload.Instance; 
         
-    }
-
-
-
+    } 
 
     /// <summary>
     /// The Topological-Node interface
