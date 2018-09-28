@@ -66,6 +66,7 @@ namespace Pixy.Topology.Nodes
                 {
                     this._serials.Push(key);
                     this._table[key] = null;
+                    this._payload--;
                     return true;
                 }
             }
