@@ -91,7 +91,7 @@ namespace Pixy.Topology.Nodes
 
         public IEnumerable<ITN> GetCurrentLayer()
         {
-            yield return this;
+            yield return this; 
         }
         
     } 
