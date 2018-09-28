@@ -1,34 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-
-namespace Pixy.Topology
-{
-    public static class Utils
-    { 
-        public static bool IsEmpty<T>(this Stack<T> stack)
-        {
-            return stack is Stack<T> s && s.Count == 0;
-        }
-
-    }
-
-    public static class Contract
-    {
-
-        public static void ArgumentOutOfRange(bool condition,string argName)
-        {
-            if (condition)
-                throw new ArgumentOutOfRangeException(argName);
-        }
-
-        public static void Null<T>(T arg, string argName) where T: class
-        {
-            if (arg is null)
-                throw new ArgumentNullException(argName);
-        }
-    }
-}
-
+﻿
 namespace Pixy.Topology.Nodes
 {
     using Pixy.Topology.Payloads;
